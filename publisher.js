@@ -17,9 +17,12 @@ async function main() {
     setInterval(() => {
       let date = new Date()
       let strMessage = `test message ${counter} on ${date.toLocaleTimeString()}`
+      
+      // Deffered a message for 5 seconds in the nsqd
       nsqClient.deferPublish("delayed_topic", [strMessage], 5000, () => {
         console.log(strMessage)
       })
+      
       counter += 1
     }, 2000)
 
