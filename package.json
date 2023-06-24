@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-pub": "nodemon -L publisher.js",
-    "dev-con": "nodemon -L consumer.js"
+    "dev-con-halo": "nodemon -L consumer_halo.js",
+    "dev-con-hi": "nodemon -L consumer_hi.js"
   },
   "author": "",
   "license": "ISC",
